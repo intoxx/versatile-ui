@@ -11,5 +11,5 @@ module.exports = {
 		preflight: false
 	},
 	plugins: [],
-	prefix: "rl-"
+	prefix: "vs-"
 } 

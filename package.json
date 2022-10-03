@@ -1,17 +1,17 @@
 {
-	"name": "@intoxx/react-lib",
+	"name": "@intoxx/versatile-ui",
 	"version": "0.0.1",
 	"type": "module",
 	"files": [
 		"./dist"
 	],
-	"main": "./dist/react-lib.umd.cjs",
-	"module": "./dist/react-lib.js",
+	"main": "./dist/versatile-ui.umd.cjs",
+	"module": "./dist/versatile-ui.js",
 	"types": "./dist/main.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/react-lib.js",
-			"require": "./dist/react-lib.umd.cjs"
+			"import": "./dist/versatile-ui.js",
+			"require": "./dist/versatile-ui.umd.cjs"
 		},
 		"./dist/style.css": "./dist/style.css"
 	},

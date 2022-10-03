@@ -1,37 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { Title, Button } from "../lib/main";
+import {
+  TagGrid,
+  TagRow,
+  Tag,
+} from "../lib/main";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const tags = ["lisp", "common lisp", "macro"];
 
   return (
-    <div className="App">
-	<Title />
-	<Button />
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <main>
+      <TagGrid className="vs-sticky vs-top-0 vs-z-40 vs-space-y-2 vs-px-4 vs-py-3 vs-bg-black">
+        <TagRow className="vs-space-x-2">
+          {tags.map(e =>
+            <Tag
+              key={e}
+              href={`/${e.toLowerCase()}`}
+              className="vs-text-sm vs-tracking-tight vs-whitespace-nowrap vs-bg-black vs-shadow vs-border vs-border-white/50 vs-px-1 vs-py-0.5 vs-text-white vs-font-semibold"
+            >
+              {e}
+            </Tag>
+          )}
+        </TagRow>
+      </TagGrid>
+
+    </main>
   )
 }
-
-export default App

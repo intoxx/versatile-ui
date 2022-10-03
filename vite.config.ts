@@ -25,8 +25,8 @@ export default defineConfig({
 
 		lib: {
 			entry: resolve(__dirname, "lib/main.tsx"),
-			name: "react-lib",
-			filename: "react-lib"
+			name: "versatile-ui",
+			filename: "versatile-ui"
 		},
 
 		rollupOptions: {
